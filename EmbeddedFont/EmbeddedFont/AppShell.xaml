@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="EmbeddedFont.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:icons="clr-namespace:EzeKhoj.Constants"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:page="clr-namespace:EmbeddedFont"
+    Shell.NavBarIsVisible="False"
+    mc:Ignorable="d">
+    <TabBar>
+        <Tab Title="Tab 1">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialFontFamily" Glyph="{x:Static icons:IconFont.Home}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate page:MainPage}" />
+        </Tab>
+        <Tab Title="Tab 2">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static icons:IconFont.Magnify}" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate page:MainPage}" />
+        </Tab>
+    </TabBar>
+</Shell>
